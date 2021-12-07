@@ -9,4 +9,7 @@ export class AppComponent {
   title = '12';
   name = 'Nam';
   age = '22';
+  getVal(){
+    return "This is my code";
+  }
 }
