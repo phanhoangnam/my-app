@@ -1,5 +1,31 @@
 <h1>Angular {{title}}</h1>
-<h2>Hello {{name}}</h2>
-<h2>You are {{age}}</h2>
-
-<h1>{{getVal()}}</h1>
+<app-header></app-header>
+<hr/>
+<app-login></app-login>
+<button (click)="getName('Nam')">Click Me</button>
+<button (click)="getName(77)">Click Me with number</button>
+<br/>
+<hr/>
+<h2>Events</h2>
+<input type="text" #box1 placeholder="keyup box" (keyup)="getData(box1.value)"/><br/>
+<input type="text" #box2 placeholder="keydown box" (keydown)="getData(box2.value)"/><br/>
+<input type="text" #box3 placeholder="blur box" (blur)="getData(box3.value)"/><br/>
+<input type="text" #box4 placeholder="input box" (input)="getData(box4.value)"/><br/>
+<h1 (mouseover)="getData('mouse over')">This is mouseover event</h1>
+<h1 (mouseleave)="getData('mouse leave')">This is mouseleave event</h1>
+<br/>
+<hr/>
+<h2>Get Input Value</h2>
+<input type="text" #box placeholder="Enter name" name="username"/>
+<button (click)="getValue(box.value)">Click Me</button>
+<p>Box value is : {{displayValue}}</p>
+<br/>
+<hr/>
+<h2>Counter Example</h2>
+<button (click)="counter('minus')">--</button>
+<span>  Count : {{count}}  </span>
+<button (click)="counter('add')">++</button>
+<hr/>
+<app-user-list></app-user-list>
+<hr/>
+<app-footer></app-footer>

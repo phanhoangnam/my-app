@@ -9,7 +9,22 @@ export class AppComponent {
   title = '12';
   name = 'Nam';
   age = '22';
-  getVal(){
-    return "This is my code";
+  getName(name:any){
+    alert("Hello " + name);
+  }
+
+  getData(val:string){
+    console.warn(val);
+  }
+
+  displayValue = '';
+  getValue(val:string){
+    console.warn(val);
+    this.displayValue = val;
+  }
+
+  count=0;
+  counter(type:string){
+    type==="add"?this.count++:this.count--;
   }
 }
